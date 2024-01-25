@@ -1,6 +1,9 @@
 package ru.practicum.event.model;
 
+import lombok.*;
 import lombok.experimental.FieldDefaults;
+
+import javax.persistence.*;
 
 @Data
 @Builder

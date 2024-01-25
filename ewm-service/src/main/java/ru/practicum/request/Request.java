@@ -1,11 +1,13 @@
 package ru.practicum.request;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.*;
 import lombok.experimental.FieldDefaults;
 import ru.practicum.event.model.Event;
 import ru.practicum.user.User;
 import ru.practicum.util.enums.Status;
 
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 import static ru.practicum.Util.DATE_FORMAT;

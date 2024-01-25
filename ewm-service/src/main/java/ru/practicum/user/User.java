@@ -1,6 +1,9 @@
 package ru.practicum.user;
 
+import lombok.*;
 import lombok.experimental.FieldDefaults;
+
+import javax.persistence.*;
 
 @Data
 @Builder

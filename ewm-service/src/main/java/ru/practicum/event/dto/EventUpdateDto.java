@@ -1,6 +1,7 @@
 package ru.practicum.event.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.*;
 import lombok.experimental.FieldDefaults;
 import ru.practicum.util.enums.StateAction;
 

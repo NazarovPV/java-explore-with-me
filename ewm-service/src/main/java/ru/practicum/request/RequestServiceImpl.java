@@ -5,15 +5,14 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.practicum.event.EventRepository;
-import ru.practicum.event.model.Event;
 import ru.practicum.exception.ConflictException;
 import ru.practicum.request.dto.RequestDto;
 import ru.practicum.user.User;
-import ru.practicum.util.UnionService;
+import ru.practicum.event.model.Event;
 import ru.practicum.util.enums.State;
 import ru.practicum.util.enums.Status;
-
 import java.time.LocalDateTime;
+import ru.practicum.util.UnionService;
 import java.util.List;
 
 @Slf4j

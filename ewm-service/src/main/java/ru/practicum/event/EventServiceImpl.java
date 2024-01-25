@@ -23,15 +23,13 @@ import ru.practicum.request.RequestMapper;
 import ru.practicum.request.RequestRepository;
 import ru.practicum.request.dto.RequestDto;
 import ru.practicum.user.User;
-import ru.practicum.util.UnionService;
 import ru.practicum.util.enums.State;
 import ru.practicum.util.enums.StateAction;
+import ru.practicum.util.UnionService;
 import ru.practicum.util.enums.Status;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 import static ru.practicum.Util.START_HISTORY;
 import static ru.practicum.util.enums.State.PUBLISHED;

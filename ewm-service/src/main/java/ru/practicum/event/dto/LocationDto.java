@@ -1,5 +1,6 @@
 package ru.practicum.event.dto;
 
+import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 @Data

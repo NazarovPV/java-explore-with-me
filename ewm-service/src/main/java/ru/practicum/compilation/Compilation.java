@@ -1,8 +1,10 @@
 package ru.practicum.compilation;
 
+import lombok.*;
 import lombok.experimental.FieldDefaults;
 import ru.practicum.event.model.Event;
 
+import javax.persistence.*;
 import java.util.Set;
 
 @Data
