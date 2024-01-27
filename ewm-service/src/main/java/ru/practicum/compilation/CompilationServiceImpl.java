@@ -29,7 +29,7 @@ public class CompilationServiceImpl implements CompilationService {
     @Transactional
     public CompilationDto addCompilation(CompilationNewDto compilationNewDto) {
 
-        Compilation compilation = CompilationMapper.returnCompilation(compilationNewDto);
+        Compilation compilation = CollectionMapper.returnCompilation(compilationNewDto);
 
         if (compilation.getPinned() == null) {
             compilation.setPinned(false);
@@ -41,7 +41,7 @@ public class CompilationServiceImpl implements CompilationService {
         }
 
         compilation = compilationRepository.save(compilation);
-        return CompilationMapper.returnCompilationDto(compilation);
+        return CollectionMapper.returnCompilationDto(compilation);
     }
 
     @Override
@@ -74,7 +74,7 @@ public class CompilationServiceImpl implements CompilationService {
         }
 
         compilation = compilationRepository.save(compilation);
-        return CompilationMapper.returnCompilationDto(compilation);
+        return CollectionMapper.returnCompilationDto(compilation);
     }
 
     @Override
@@ -88,7 +88,7 @@ public class CompilationServiceImpl implements CompilationService {
         } else {
             compilations = compilationRepository.findAll(pageRequest).getContent();;
         }
-        return new ArrayList<>(CompilationMapper.returnCompilationDtoSet(compilations));
+        return new ArrayList<>(CollectionMapper.returnCompilationDtoSet(compilations));
     }
 
     @Override
@@ -96,6 +96,6 @@ public class CompilationServiceImpl implements CompilationService {
 
         Compilation compilation = unionService.getCompilationOrNotFound(compId);
 
-        return CompilationMapper.returnCompilationDto(compilation);
+        return CollectionMapper.returnCompilationDto(compilation);
     }
 }

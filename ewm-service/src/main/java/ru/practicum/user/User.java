@@ -5,6 +5,7 @@ import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
 
+@Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
@@ -12,8 +13,6 @@ import javax.persistence.*;
 @Table(name = "users", schema = "public")
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @FieldDefaults(level = AccessLevel.PRIVATE)
-@Getter
-@Setter
 public class User {
 
     @Id
