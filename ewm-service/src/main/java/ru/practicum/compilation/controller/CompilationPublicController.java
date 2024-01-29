@@ -3,7 +3,6 @@ package ru.practicum.compilation.controller;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import ru.practicum.compilation.CompilationService;
 import ru.practicum.compilation.dto.CompilationDto;
@@ -17,7 +16,6 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/compilations")
-@Validated
 public class CompilationPublicController {
 
     private final CompilationService compilationService;
@@ -28,7 +26,7 @@ public class CompilationPublicController {
                                                 @PositiveOrZero @RequestParam(name = "from", defaultValue = "0") Integer from,
                                                 @Positive @RequestParam(name = "size", defaultValue = "10") Integer size) {
 
-        log.info("Get all compilations from pinned = {}, and from = {}, size = {}", pinned, from, size);
+        log.info("Get all compilations from pinned = {}, and from = {}, size = {}", pinned,  from, size);
         return compilationService.getCompilations(pinned, from, size);
     }
 
