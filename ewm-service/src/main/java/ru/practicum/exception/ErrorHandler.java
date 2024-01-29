@@ -19,7 +19,7 @@ public class ErrorHandler {
 
     @ExceptionHandler
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public ErrorResponse handleAutoValidationException(final ConstraintViolationException e){
+    public ErrorResponse handleAutoValidationException(final ConstraintViolationException e) {
         return new ErrorResponse((e.getMessage()));
     }
 
